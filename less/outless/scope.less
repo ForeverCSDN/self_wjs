@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/*全局变量*/
+@default_width:100px;
+.default-style{
+  /*局部变量*/
+  @default_width:200px;
+  .first-style{
+    width:@default_width;
+    .second-style{
+      .func();
+    }
+  }
+
+}
+/*定义方法*/
+.func(){
+  width:@default_width;
+  font-size:@default_width;
+}
+.g-style{
+  width:@default_width;
+  height:@default_width;
+  .func();
+}
+
+/*传入多个参数*/
+.boxShadow(@x:0,@y:0,@blur:3px,@color:#000){
+          box-shadow:@arguments;
+  -webkit-box-shadow:@arguments;
+     -moz-box-shadow:@arguments;
+       -o-box-shadow:@arguments;
+      -ms-box-shadow:@arguments;
+}
+a{
+  .boxShadow(10px,10px,20px,#ccc);
+}
+/*单个传参*/
+.transformStyle(@deg:10deg,@loc:20px){
+          transform:rotateX(@deg) translateX(@loc);
+  -webkit-transform:rotateX(@deg) translateX(@loc);
+}
+div{
+  .transformStyle(110deg,220px);
+}
+/*命名空间*/
+/*复用选择器*/
+#namespace{
+  .user{
+    margin:0;
+    padding:0;
+  }
+  a{
+    color:red;
+    text-decoration:none;
+    &:hover{
+      color:#fff;
+      text-decoration:underline;
+    }
+  }
+}
+/*内置函数*/
+@initial:#222;
+body{
+  background:lighten(@initial,10%);
+  background:darken(@initial,10%);
+  background:fadein(@initial,10%);
+  background:fadeout(@initial,10%);
+  background:lighten(@initial*2,10%);
+  background:lighten(@initial+1,10%);
+}

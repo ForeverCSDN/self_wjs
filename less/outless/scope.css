@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/*全局变量*/
+.default-style {
+  /*局部变量*/
+}
+.default-style .first-style {
+  width: 200px;
+}
+.default-style .first-style .second-style {
+  width: 100px;
+  font-size: 100px;
+}
+/*定义方法*/
+.g-style {
+  height: 100px;
+  width: 100px;
+  font-size: 100px;
+}
+/*传入多个参数*/
+a {
+  box-shadow: 10px 10px 20px #ccc;
+  -webkit-box-shadow: 10px 10px 20px #ccc;
+  -moz-box-shadow: 10px 10px 20px #ccc;
+  -o-box-shadow: 10px 10px 20px #ccc;
+  -ms-box-shadow: 10px 10px 20px #ccc;
+}
+/*单个传参*/
+div {
+  transform: rotateX(110deg) translateX(220px);
+  -webkit-transform: rotateX(110deg) translateX(220px);
+}
+/*命名空间*/
+/*复用选择器*/
+#namespace .user {
+  margin: 0;
+  padding: 0;
+}
+#namespace a {
+  color: red;
+  text-decoration: none;
+}
+#namespace a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+/*内置函数*/
+body {
+  background: #3c3c3c;
+  background: #080808;
+  background: #222222;
+  background: rgba(34, 34, 34, 0.9);
+  background: #5e5e5e;
+  background: #3d3d3d;
+}

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+/*变量定义*/
+@mainColor:#ff0000;
+@mainFont:14px;
+@mainBackground:#ccc;
+
+.color1{
+  color:@mainColor;
+}
+.font1{
+  font-size:@mainFont;
+}
+
+/*css类的混合*/
+.colorFont{
+  .color1();
+  .font1();
+}
+
+/*方法的混合*/
+.font2(){
+  font-size:@mainFont;
+  background-color:@mainColor;
+}
+.font3(){
+  text-align:center;
+  color:#fff;
+}
+.fontX{
+  .font2();
+  .font3();
+}
+
+/*嵌套*/
+.colorX{
+  .font2();
+  .color2{
+    .font3();
+  }
+  .color3{
+    color:#cfcfcf;
+  }
+  >.color4{
+    font-size:15px;
+  }
+  &:hover{
+    a{
+      text-decoration:none;
+    }
+  }
+}
+/*import导包*/
+@import "outless/outless.less";
+
+.default_style{
+  color:@default_color;
+  font-size:@default_font;
+  .default_func();
+}
+
+

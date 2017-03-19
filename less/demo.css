@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*变量定义*/
+.color1 {
+  color: #ff0000;
+}
+.font1 {
+  font-size: 14px;
+}
+/*css类的混合*/
+.colorFont {
+  color: #ff0000;
+  font-size: 14px;
+}
+/*方法的混合*/
+.fontX {
+  font-size: 14px;
+  background-color: #ff0000;
+  text-align: center;
+  color: #fff;
+}
+/*嵌套*/
+.colorX {
+  font-size: 14px;
+  background-color: #ff0000;
+}
+.colorX .color2 {
+  text-align: center;
+  color: #fff;
+}
+.colorX .color3 {
+  color: #cfcfcf;
+}
+.colorX > .color4 {
+  font-size: 15px;
+}
+.colorX:hover a {
+  text-decoration: none;
+}
+/*import导包*/
+/*外部less*/
+.default_style {
+  color: green;
+  font-size: 28px;
+  text-align: center;
+  border-radius: 10px;
+}

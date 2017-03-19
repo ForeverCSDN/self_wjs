@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <!--用户用IE浏览器访问页面的时候优先使用最新的渲染引擎渲染页面-->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"/>
+    <!--移动端适配-->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>微金所</title>
+    <!--引用bootstrap CSS-->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css"/>
+
+    <!--IE9以下h5标签的兼容以及支持媒体查询-->
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="libs/jquery/jquery.min.js"></script>
+<!--引用bootstrap JS-->
+<script src="libs/bootstrap/js/bootstrap.js"></script>
+</body>
+</html>
